@@ -170,7 +170,7 @@ export default class SignIn extends Component {
                 md={{ span: 12 }}
               >
                 <Title className="mb-15">Sign In</Title>
-                <Title className="font-regular text-muted" level={5}>
+                <Title level={5}>
                   Enter your email and password to sign in
                 </Title>
                 <Form
@@ -225,9 +225,9 @@ export default class SignIn extends Component {
                       SIGN IN
                     </Button>
                   </Form.Item>
-                  <p className="font-semibold text-muted">
+                  <p >
                     Don't have an account?{" "}
-                    <Link to="/sign-up" className="text-dark font-bold">
+                    <Link to="/sign-up" >
                       Sign Up
                     </Link>
                   </p>

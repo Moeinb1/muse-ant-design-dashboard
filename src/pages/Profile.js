@@ -99,7 +99,7 @@ function Profile() {
   ];
 
   const uploadButton = (
-    <div className="ant-upload-text font-semibold text-dark">
+    <div >
       {<VerticalAlignTopOutlined style={{ width: 20, color: "#000" }} />}
       <div>Upload New Project</div>
     </div>
@@ -174,7 +174,7 @@ function Profile() {
                 <Avatar size={74} shape="square" src={profilavatar} />
 
                 <div className="avatar-info">
-                  <h4 className="font-semibold m-0">Sarah Jacob</h4>
+                  <h4 >Sarah Jacob</h4>
                   <p>CEO / Co-Founder</p>
                 </div>
               </Avatar.Group>
@@ -203,7 +203,7 @@ function Profile() {
           <Card
             bordered={false}
             className="header-solid h-full"
-            title={<h6 className="font-semibold m-0">Platform Settings</h6>}
+            title={<h6 >Platform Settings</h6>}
           >
             <ul className="list settings-list">
               <li>
@@ -245,7 +245,7 @@ function Profile() {
         <Col span={24} md={8} className="mb-24">
           <Card
             bordered={false}
-            title={<h6 className="font-semibold m-0">Profile Information</h6>}
+            title={<h6 >Profile Information</h6>}
             className="header-solid h-full card-profile-information"
             extra={<Button type="link">{pencil}</Button>}
             bodyStyle={{ paddingTop: 0, paddingBottom: 16 }}
@@ -288,7 +288,7 @@ function Profile() {
         <Col span={24} md={8} className="mb-24">
           <Card
             bordered={false}
-            title={<h6 className="font-semibold m-0">Conversations</h6>}
+            title={<h6 >Conversations</h6>}
             className="header-solid h-full"
             bodyStyle={{ paddingTop: 0, paddingBottom: 16 }}
           >
@@ -317,7 +317,7 @@ function Profile() {
         className="header-solid mb-24"
         title={
           <>
-            <h6 className="font-semibold">Projects</h6>
+            <h6 >Projects</h6>
             <p>Architects design houses</p>
           </>
         }

@@ -14,10 +14,6 @@ body {
   background-color: #fafafa;
   letter-spacing: -0.3px;
   color: rgba(0, 0, 0, 0.65);
-  font-size: 14px;
-  line-height: 1.6;
-  font-weight: 400;
-  font-family: open sans, Helvetica, Arial, sans-serif;
 }
 .ant-layout.ant-layout-has-sider {
   flex-direction: row;
@@ -52,9 +48,7 @@ body {
   height: 1px;
   background-color: #f5f5f5;
 }
-.layout-dashboard .ant-layout-sider.sider-primary .brand {
-  font-weight: 600;
-}
+
 .layout-dashboard .ant-layout-sider.sider-primary .brand span {
   vertical-align: middle;
   margin-left: 3px;
@@ -150,7 +144,6 @@ body {
 .layout-dashboard .ant-layout-sider.sider-primary .ant-menu-submenu .active {
   background-color: #fff;
   box-shadow: 0 20px 27px rgb(0 0 0 / 5%);
-  font-weight: 600;
 }
 .layout-dashboard .ant-layout-sider.sider-primary .ant-menu-item a,
 .layout-dashboard .ant-layout-sider.sider-primary .ant-menu-submenu a {
@@ -2350,10 +2343,6 @@ section.ant-layout.layout-content .ant-layout-content.content-ant {
   margin-bottom: 0;
 }
 .widget-2 .ant-statistic-content {
-  font-family: open sans, Helvetica, Arial, sans-serif;
-  font-weight: 600;
-  font-size: 20px;
-  padding: 12px 16px;
   border-top: 1px solid #f5f5f5;
   text-align: center;
 }

@@ -23,7 +23,7 @@ function Footer() {
           <div className="copyright">
             © 2021, made with
             {<HeartFilled />} by
-            <a href="#pablo" className="font-weight-bold" target="_blank">
+            <a href="#pablo" target="_blank">
               Creative Tim
             </a>
             for a better web.

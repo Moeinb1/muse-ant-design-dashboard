@@ -388,7 +388,7 @@ function Billing() {
                       className="ant-row-flex ant-row-flex-middle"
                     >
                       <Col xs={24} md={12}>
-                        <h6 className="font-semibold m-0">Payment Methods</h6>
+                        <h6 >Payment Methods</h6>
                       </Col>
                       <Col xs={24} md={12} className="d-flex">
                         <Button type="primary">ADD NEW CARD</Button>
@@ -425,7 +425,7 @@ function Billing() {
           <Card
             bordered={false}
             className="header-solid h-full ant-invoice-card"
-            title={[<h6 className="font-semibold m-0">Invoices</h6>]}
+            title={[<h6>Invoices</h6>]}
             extra={[
               <Button type="primary">
                 <span>VIEW ALL</span>
@@ -456,7 +456,7 @@ function Billing() {
           <Card
             className="header-solid h-full"
             bordered={false}
-            title={[<h6 className="font-semibold m-0">Billing Information</h6>]}
+            title={[<h6 >Billing Information</h6>]}
             bodyStyle={{ paddingTop: "0" }}
           >
             <Row gutter={[24, 24]}>
@@ -496,7 +496,7 @@ function Billing() {
             bordered={false}
             bodyStyle={{ paddingTop: 0 }}
             className="header-solid h-full  ant-list-yes"
-            title={<h6 className="font-semibold m-0">Your Transactions</h6>}
+            title={<h6 >Your Transactions</h6>}
             extra={
               <p className="card-header-date">
                 {calender}

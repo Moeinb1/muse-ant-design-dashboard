@@ -432,7 +432,7 @@ function Home() {
                         </td>
                         <td>{d.member}</td>
                         <td>
-                          <span className="text-xs font-weight-bold">
+                          <span>
                             {d.bud}{" "}
                           </span>
                         </td>

@@ -190,7 +190,7 @@ export default class SignUp extends Component {
                   <img src={logo3} alt="logo 3" />
                 </Button>
               </div>
-              <p className="text-center my-25 font-semibold text-muted">Or</p>
+              <p >Or</p>
               <Form
                 name="basic"
                 initialValues={{ remember: true }}
@@ -226,7 +226,7 @@ export default class SignUp extends Component {
                 <Form.Item name="remember" valuePropName="checked">
                   <Checkbox>
                     I agree the{" "}
-                    <a href="#pablo" className="font-bold text-dark">
+                    <a href="#pablo" >
                       Terms and Conditions
                     </a>
                   </Checkbox>
@@ -242,9 +242,9 @@ export default class SignUp extends Component {
                   </Button>
                 </Form.Item>
               </Form>
-              <p className="font-semibold text-muted text-center">
+              <p >
                 Already have an account?{" "}
-                <Link to="/sign-in" className="font-bold text-dark">
+                <Link to="/sign-in" >
                   Sign In
                 </Link>
               </p>

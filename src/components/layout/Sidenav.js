@@ -163,8 +163,8 @@ function Sidenav({ color }) {
   return (
     <>
       <div className="brand">
-        <img src={logo} alt="" />
-        <span>Muse Dashboard</span>
+        {/* <img src={logo} alt="" /> */}
+        <span> </span>
       </div>
       <hr />
       <Menu theme="light" mode="inline">
@@ -178,7 +178,7 @@ function Sidenav({ color }) {
             >
               {dashboard}
             </span>
-            <span className="label">Dashboard</span>
+            <span className="label">داشبورد</span>
           </NavLink>
         </Menu.Item>
         <Menu.Item key="2">
@@ -191,7 +191,7 @@ function Sidenav({ color }) {
             >
               {tables}
             </span>
-            <span className="label">Tables</span>
+            <span className="label" style={{ fontFamily: 'Vazirmatn !important' }}>پرفرما</span>
           </NavLink>
         </Menu.Item>
         <Menu.Item key="3">
@@ -204,7 +204,7 @@ function Sidenav({ color }) {
             >
               {billing}
             </span>
-            <span className="label">Billing</span>
+            <span className="label">قرارداد</span>
           </NavLink>
         </Menu.Item>
         <Menu.Item key="4">
@@ -217,10 +217,10 @@ function Sidenav({ color }) {
             >
               {rtl}
             </span>
-            <span className="label">RTL</span>
+            <span className="label">تخصیص ارز</span>
           </NavLink>
         </Menu.Item>
-        <Menu.Item className="menu-item-header" key="5">
+        {/* <Menu.Item className="menu-item-header" key="5">
           Account Pages
         </Menu.Item>
         <Menu.Item key="6">
@@ -247,9 +247,9 @@ function Sidenav({ color }) {
             <span className="icon">{signup}</span>
             <span className="label">Sign Up</span>
           </NavLink>
-        </Menu.Item>
+        </Menu.Item> */}
       </Menu>
-      <div className="aside-footer">
+      {/* <div className="aside-footer">
         <div
           className="footer-box"
           style={{
@@ -265,7 +265,7 @@ function Sidenav({ color }) {
             DOCUMENTATION
           </Button>
         </div>
-      </div>
+      </div> */}
     </>
   );
 }

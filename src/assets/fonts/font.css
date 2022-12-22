@@ -1,0 +1,13 @@
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+@font-face {
+  font-family: "VazirmatnMedium";
+  src: local("VazirmatnMedium"),
+    url("./Vazirmatn-Medium.ttf") format("truetype");
+  font-weight: normal;
+}
