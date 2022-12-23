@@ -14,7 +14,7 @@
 import { Menu, Button } from "antd";
 import { NavLink, useLocation } from "react-router-dom";
 import logo from "../../assets/images/logo.png";
-
+import { DollarCircleOutlined, ContainerOutlined } from '@ant-design/icons';
 function Sidenav({ color }) {
   const { pathname } = useLocation();
   const page = pathname.replace("/", "");
@@ -202,7 +202,7 @@ function Sidenav({ color }) {
                 background: page === "billing" ? color : "",
               }}
             >
-              {billing}
+              <ContainerOutlined style={{ fontSize: 20, color: 'transparent' }} />
             </span>
             <span className="label">قرارداد</span>
           </NavLink>
@@ -215,9 +215,9 @@ function Sidenav({ color }) {
                 background: page === "rtl" ? color : "",
               }}
             >
-              {rtl}
-            </span>
+              <DollarCircleOutlined style={{ fontSize: 20, color: 'transparent' }} />            </span>
             <span className="label">تخصیص ارز</span>
+
           </NavLink>
         </Menu.Item>
         {/* <Menu.Item className="menu-item-header" key="5">
