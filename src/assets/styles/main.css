@@ -56,6 +56,9 @@ body {
 
 .layout-dashboard .ant-layout-sider.sider-primary .ant-layout-sider-children {
   width: auto;
+  border: 1px;
+  border-color: #00369e;
+
 }
 
 .layout-dashboard .ant-layout-sider.sider-primary .ant-menu-inline {

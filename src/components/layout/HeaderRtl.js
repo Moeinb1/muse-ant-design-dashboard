@@ -277,12 +277,16 @@ function Header({
         <Col span={24} md={6}>
           <Breadcrumb>
             <Breadcrumb.Item>
-              <NavLink to="/">Pages</NavLink>
+              <NavLink to="/">مسیرها</NavLink>
             </Breadcrumb.Item>
-            <Breadcrumb.Item>{name}</Breadcrumb.Item>
+            <Breadcrumb.Item>
+              {name === 'dashboard' ? 'داشبورد' : name === 'tables' ? 'پرفرما' : name === 'billing' ? 'قرارداد' : name === 'rtl' ? 'تخصیص ارز' : ''}
+            </Breadcrumb.Item>
           </Breadcrumb>
           <div className="ant-page-header-heading">
-            <span className="ant-page-header-heading-title">{subName}</span>
+            <span style={{ lineHeight: 2 }} className="ant-page-header-heading-title">
+              {subName === 'dashboard' ? 'داشبورد' : subName === 'tables' ? 'پرفرما' : subName === 'billing' ? 'قرارداد' : subName === 'rtl' ? 'تخصیص ارز' : ''}
+            </span>
           </div>
         </Col>
         <Col span={24} md={18} className="header-control">

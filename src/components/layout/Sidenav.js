@@ -167,7 +167,7 @@ function Sidenav({ color }) {
         <span> </span>
       </div>
       <hr />
-      <Menu theme="light" mode="inline">
+      <Menu theme="light" mode="inline" style={{ fontWeight: 510 }}>
         <Menu.Item key="1">
           <NavLink to="/dashboard">
             <span
@@ -191,7 +191,7 @@ function Sidenav({ color }) {
             >
               {tables}
             </span>
-            <span className="label" style={{ fontFamily: 'Vazirmatn !important' }}>پرفرما</span>
+            <span className="label">پرفرما</span>
           </NavLink>
         </Menu.Item>
         <Menu.Item key="3">
@@ -216,7 +216,7 @@ function Sidenav({ color }) {
               }}
             >
               <DollarCircleOutlined style={{ fontSize: 20, color: 'transparent' }} />            </span>
-            <span className="label">تخصیص ارز</span>
+            <span className="label" >تخصیص ارز</span>
 
           </NavLink>
         </Menu.Item>

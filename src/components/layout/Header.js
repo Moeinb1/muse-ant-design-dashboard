@@ -277,18 +277,19 @@ function Header({
         <Col span={24} md={6}>
           <Breadcrumb>
             <Breadcrumb.Item>
-              <NavLink to="/">Pages</NavLink>
+              <NavLink to="/">مسیرها</NavLink>
             </Breadcrumb.Item>
             <Breadcrumb.Item style={{ textTransform: "capitalize" }}>
-              {name.replace("/", "")}
+              {name === 'dashboard' ? 'داشبورد' : name === 'tables' ? 'پرفرما' : name === 'billing' ? 'قرارداد' : name === 'rtl' ? 'تخصیص ارز' : ''}
             </Breadcrumb.Item>
           </Breadcrumb>
           <div className="ant-page-header-heading">
             <span
               className="ant-page-header-heading-title"
-              style={{ textTransform: "capitalize" }}
+              style={{ textTransform: "capitalize", lineHeight: 2 }}
             >
-              {subName.replace("/", "")}
+              {subName === 'dashboard' ? 'داشبورد' : subName === 'tables' ? 'پرفرما' : subName === 'billing' ? 'قرارداد' : subName === 'rtl' ? 'تخصیص ارز' : ''}
+
             </span>
           </div>
         </Col>

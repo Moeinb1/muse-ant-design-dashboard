@@ -16,5 +16,5 @@
         font-family: "IranianSans";
         src: local("IranianSans"),
          url("../src/assets/fonts/Iranian-Sans.ttf") format("truetype");
-        font-weight: bolder;
+        font-weight: normal;
         }
