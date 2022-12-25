@@ -44,16 +44,16 @@ const Table = () => {
                 }}
 
                 autoComplete="off"
-                style={{ background: '#FFFFFF', borderRadius: 16, padding: 50 }}
+                style={{ background: '#FFFFFF', borderRadius: 8, padding: 50 }}
                 form={form}
-                layout="horizontal"
+                layout="vertical"
                 onValuesChange={onFormLayoutChange}
                 disabled={componentDisabled}
             >
 
                 <Row>
                     <Col span={8}>
-                        <Form.Item label='شماره قرارداد' name='contractNumber' style={{ margin: 12 }} >
+                        <Form.Item label={<div style={{}}> 'شماره قرارداد' </div>} name='contractNumber' style={{ margin: 12 }} >
                             <Input />
                         </Form.Item>
                         <Form.Item label='تاریخ قرارداد' style={{ margin: 12 }}>
