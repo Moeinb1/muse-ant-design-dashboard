@@ -13,7 +13,6 @@
 // import { useState } from "react";
 import { Menu, Button } from "antd";
 import { NavLink, useLocation } from "react-router-dom";
-import logo from "../../assets/images/logo.png";
 import { DollarCircleOutlined, ContainerOutlined } from '@ant-design/icons';
 function Sidenav({ color }) {
   const { pathname } = useLocation();
@@ -191,7 +190,7 @@ function Sidenav({ color }) {
             >
               {tables}
             </span>
-            <span className="label">پرفرما</span>
+            <span className="label">قرارداد</span>
           </NavLink>
         </Menu.Item>
         <Menu.Item key="3">
@@ -204,7 +203,7 @@ function Sidenav({ color }) {
             >
               <ContainerOutlined style={{ fontSize: 20, color: 'transparent' }} />
             </span>
-            <span className="label">قرارداد</span>
+            <span className="label">پرفرما</span>
           </NavLink>
         </Menu.Item>
         <Menu.Item key="4">

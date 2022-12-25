@@ -280,12 +280,12 @@ function Header({
               <NavLink to="/">مسیرها</NavLink>
             </Breadcrumb.Item>
             <Breadcrumb.Item>
-              {name === 'dashboard' ? 'داشبورد' : name === 'tables' ? 'پرفرما' : name === 'billing' ? 'قرارداد' : name === 'rtl' ? 'تخصیص ارز' : ''}
+              {name === 'dashboard' ? 'داشبورد' : name === 'tables' ? 'قرارداد' : name === 'billing' ? 'پرفرما' : name === 'rtl' ? 'تخصیص ارز' : ''}
             </Breadcrumb.Item>
           </Breadcrumb>
           <div className="ant-page-header-heading">
             <span style={{ lineHeight: 2 }} className="ant-page-header-heading-title">
-              {subName === 'dashboard' ? 'داشبورد' : subName === 'tables' ? 'پرفرما' : subName === 'billing' ? 'قرارداد' : subName === 'rtl' ? 'تخصیص ارز' : ''}
+              {subName === 'dashboard' ? 'داشبورد' : subName === 'tables' ? 'قرارداد' : subName === 'billing' ? 'پرفرما' : subName === 'rtl' ? 'تخصیص ارز' : ''}
             </span>
           </div>
         </Col>

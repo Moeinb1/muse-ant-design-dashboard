@@ -280,7 +280,7 @@ function Header({
               <NavLink to="/">مسیرها</NavLink>
             </Breadcrumb.Item>
             <Breadcrumb.Item style={{ textTransform: "capitalize" }}>
-              {name === 'dashboard' ? 'داشبورد' : name === 'tables' ? 'پرفرما' : name === 'billing' ? 'قرارداد' : name === 'rtl' ? 'تخصیص ارز' : ''}
+              {name === 'dashboard' ? 'داشبورد' : name === 'tables' ? 'قرارداد' : name === 'billing' ? 'پرفرما' : name === 'rtl' ? 'تخصیص ارز' : ''}
             </Breadcrumb.Item>
           </Breadcrumb>
           <div className="ant-page-header-heading">
@@ -288,7 +288,7 @@ function Header({
               className="ant-page-header-heading-title"
               style={{ textTransform: "capitalize", lineHeight: 2 }}
             >
-              {subName === 'dashboard' ? 'داشبورد' : subName === 'tables' ? 'پرفرما' : subName === 'billing' ? 'قرارداد' : subName === 'rtl' ? 'تخصیص ارز' : ''}
+              {subName === 'dashboard' ? 'داشبورد' : subName === 'tables' ? 'قرارداد' : subName === 'billing' ? 'پرفرما' : subName === 'rtl' ? 'تخصیص ارز' : ''}
 
             </span>
           </div>
