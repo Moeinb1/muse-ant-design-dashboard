@@ -6,15 +6,14 @@ import MiniTable from './../components/table/MiniTable';
 
 function Billing() {
   return (
-    <div style={{ background: '#F5F5F5', borderRadius: 16, opacity: 0.8 }}>
-      <div style={{ marginBottom: 1, paddingTop: 50, paddingRight: 50, paddingLeft: 50 }}>
+    <div style={{ borderRadius: 8, opacity: 0.8 }}>
+      <div style={{ boxShadow: ' 0px 10px 0 0 #F8F8F8' }}>
         <Table />
       </div>
-      <div style={{ padding: 50 }}>
+      <div style={{ paddingTop: 30, boxShadow: ' 0px 0px 0px 5px #F8F8F8' }}>
         <MiniTable />
       </div>
     </div>
-
   );
 }
 
