@@ -26,7 +26,7 @@ const Table = () => {
                     console.log(err);
                 }}
                 autoComplete="off"
-                style={{ background: '#FFFFFF', borderRadius: 16, padding: 50 }}
+                style={{ background: '#FFFFFF', borderRadius: 8, padding: 50 }}
                 form={form}
 
                 layout="inline"
