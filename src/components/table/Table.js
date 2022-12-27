@@ -5,11 +5,6 @@ import "antd/dist/antd.css";
 import { useLocation } from "react-router-dom";
 import FactorizeTable from './FactorizeTable';
 
-import {
-    PlusCircleOutlined,
-    MinusCircleOutlined,
-    DeleteOutlined,
-} from "@ant-design/icons";
 
 const Table = () => {
     const [componentDisabled, setComponentDisabled] = useState(false);
@@ -18,29 +13,12 @@ const Table = () => {
     };
     const [form] = Form.useForm();
     const { pathname } = useLocation();
-    let [counter, setCounter] = useState(1);
-
     const page = pathname.replace("/", "");
-
-    //increase counter
-    const increase = () => {
-        setCounter((count) => count + 1);
-    };
-
-    //decrease counter
-    const decrease = () => {
-        setCounter((count) => (counter < 1 ? 0 : count - 1));
-    };
-
-    //reset counter
-    let Data = [];
-
-    for (var i = 1; i <= counter; i++) {
-        Data.push(i);
-    }
+    const [users, setusers] = useState([])
     const onFinish = (values) => {
         console.log('Received values of form:', values);
     };
+
     return (
         <>
             <Form
@@ -60,6 +38,7 @@ const Table = () => {
                 style={{ background: "#FFFFFF", borderRadius: 8, padding: 50 }}
                 form={form}
                 layout="horizontal"
+                onFinish={onFinish}
                 onValuesChange={onFormLayoutChange}
                 disabled={componentDisabled}
             >
@@ -200,7 +179,6 @@ const Table = () => {
                             />
                         </Form.Item>
                     </Col>
-
                     <Col span={8}>
                         <Form.Item
                             label={
@@ -214,7 +192,6 @@ const Table = () => {
                                 style={{ width: 160, height: 40, background: "#F8F8F8" }}
                             />
                         </Form.Item>
-
                         <Form.Item
                             label={
                                 <div style={{ marginLeft: 34, fontWeight: 600 }}>
@@ -230,7 +207,6 @@ const Table = () => {
                             />
                         </Form.Item>
                     </Col>
-
                     <Col span={8}>
                         <Form.Item
                             label={
@@ -265,61 +241,27 @@ const Table = () => {
                         )}
                     </Col>
                 </Row>
-                <h1 style={{ marginBottom: 15 }}>ایجاد فاکتور</h1>
-                <div primary style={{ margin: "10px" }} className="btn__container">
-                    <PlusCircleOutlined
-                        style={{
-                            fontSize: 20,
-                            display: "inline-block",
-                            textAlign: "center",
-                            fontWeight: "bolder",
-                            width: 30,
-                        }}
-                        className="control__btn"
-                        onClick={increase}
-                    />
-                    <MinusCircleOutlined
-                        primary
-                        style={{
-                            fontSize: 20,
-                            display: "inline-block",
-                            textAlign: "center",
-                            fontWeight: "bolder",
-                            marginRight: 8,
-                            width: 30,
-                        }}
-                        className="control__btn"
-                        onClick={decrease}
-                    />
-                </div>
-                <div
-                    style={{ fontWeight: 600, margin: "10px 0px 15px 0px" }}
-                    className="counter__output"
-                >
-                    تعداد کل فاکتورهای ایجاد شده : {counter}
-                </div>
-
-                <Row style={{ marginRight: 55, marginTop: 8 }}>
-                    <Col span={4}>
-                        <h1>نام کالا</h1>
-                    </Col>
-                    <Col span={4}>
-                        <h1>مقدار کالا</h1>
-                    </Col>
-                    <Col span={4}>
-                        {" "}
-                        <h1>قیمت واحد</h1>
-                    </Col>
-                    <Col span={4}>
-                        {" "}
-                        <h1>قیمت فاکتور سطر</h1>
-                    </Col>
+                <h1 style={{ margin: '25px 0px 30px 0px' }}>ایجاد فاکتور</h1>
+                <Row id="go" style={{ marginTop: 8, marginRight: 50 }}>
+                    <h1 style={{ fontWeight: 600, fontSize: 14 }}>نام کالا</h1>
+                    <Col span={2} />
+                    <Col span={1} />
+                    <h1 style={{ fontWeight: 600, fontSize: 14 }}> قیمت واحد</h1>
+                    <Col span={2} />
+                    <Col span={2} />
+                    <h1 style={{ fontWeight: 600, fontSize: 14 }}> مقدار کالا</h1>
+                    <Col span={2} />
+                    <h1 style={{ fontWeight: 600, fontSize: 14 }}>قیمت فاکتور سطر</h1>
                 </Row>
                 <FactorizeTable />
-
                 <Form.Item label="Button">
                     <Button onClick={() => {
-                        console.log(form.getFieldValue("users"))
+                        console.log(form.getFieldValue("users"), "usersssssss")
+                        console.log(users, "users")
+
+
+
+
                     }}>Button</Button>
                 </Form.Item>
             </Form>
