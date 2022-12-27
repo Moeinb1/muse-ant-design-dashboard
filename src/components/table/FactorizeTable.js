@@ -1,16 +1,42 @@
 import React from 'react';
+import { InputNumber, Select, Button, Form, Input, Space, Col, Row } from 'antd';
 import { MinusCircleOutlined, PlusOutlined } from '@ant-design/icons';
-import { Button, Form, Input, Space, Col } from 'antd';
-
+import "./FactorizeTable";
 
 const FactorizeTable = () => {
 
+    const [form] = Form.useForm();
+    const { Option } = Select;
+    const selectBefore = (
+        <Select
+            defaultValue="add"
+            style={{
+                width: 60,
+            }}
+        >
+            <Option value="add">+</Option>
+            <Option value="minus">-</Option>
+        </Select>
+    );
+    const selectAfter = (
+        <Select
+            defaultValue="USD"
+            style={{
+                width: 60,
+            }}
+        >
+            <Option value="USD">$</Option>
+            <Option value="EUR">€</Option>
+            <Option value="GBP">£</Option>
+            <Option value="CNY">¥</Option>
+        </Select>
+    );
 
 
     return (
-        <Col style={{ display: 'flex', direction: 'rtl' }}>
+        <Col span={24} style={{ display: 'inline flow-root list-item', direction: 'rtl' }}>
 
-            <Form.List name="users" style={{}}>
+            <Form.List name="users">
                 {(fields, { add, remove }) => (
                     <>
                         {fields.map(({ key, name, ...restField }) => (
@@ -25,60 +51,53 @@ const FactorizeTable = () => {
                             >
                                 <Form.Item
                                     {...restField}
-                                    name={[name, 'first']}
-                                    rules={[
-                                        {
-                                            required: true,
-                                            message: 'Missing first name',
-                                        },
-                                    ]}
+                                    name={[name, 'priceRowfactor']}
+
                                 >
-                                    <Input style={{ direction: 'rtl', background: "#F8F8F8" }} placeholder="قیمت فاکتور سطر" />
+                                    <Row style={{ direction: 'ltr', background: "#F8F8F8", width: 160 }} placeholder="قیمت فاکتور سطر" >
+                                        {console.log(Form)}
+                                    </Row>
                                 </Form.Item>
                                 <Form.Item
                                     {...restField}
-                                    name={[name, 'last']}
-                                    rules={[
-                                        {
-                                            required: true,
-                                            message: 'Missing last name',
-                                        },
-                                    ]}
+                                    name={[name, 'priceUnit']}
+
                                 >
-                                    <Input style={{ direction: 'rtl', background: "#F8F8F8" }} placeholder="قیمت واحد" />
+                                    <InputNumber
+                                        defaultValue={0}
+                                        formatter={(value) => `${value}`.replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
+                                        parser={(value) => value.replace(/\\s?|(,*)/g, '')}
+                                        style={{ direction: 'rtl', background: "#F8F8F8", width: 160 }}
+                                        placeholder="مقدار کالا"
+                                    />
                                 </Form.Item>
 
                                 <Form.Item
                                     {...restField}
-                                    name={[name, 'nast']}
-                                    rules={[
-                                        {
-                                            required: true,
-                                            message: 'Missing nast name',
-                                        },
-                                    ]}
+                                    name={[name, 'goodUnit']}
+
                                 >
-                                    <Input style={{ direction: 'rtl', background: "#F8F8F8" }} placeholder="مقدار کالا" />
+                                    <InputNumber style={{ direction: 'ltr', background: "#F8F8F8", width: 250 }} placeholder="قیمت واحد"
+                                        addonBefore={selectBefore} formatter={(value) => `${value}`.replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
+                                        parser={(value) => value.replace(/\\s?|(,*)/g, '')}
+                                        addonAfter={selectAfter} defaultValue={0} />
                                 </Form.Item>
                                 <Form.Item
                                     {...restField}
-                                    name={[name, 'past']}
-                                    rules={[
-                                        {
-                                            required: true,
-                                            message: 'Missing past name',
-                                        },
-                                    ]}
+                                    name={[name, 'goodName']}
+
                                 >
-                                    <Input style={{ direction: 'rtl', background: "#F8F8F8" }} placeholder="نام کالا" />
+
+                                    <Input style={{ direction: 'rtl', background: "#F8F8F8", width: 160 }} placeholder="نام کالا" />
                                 </Form.Item>
                                 <MinusCircleOutlined onClick={() => remove(name)} />
                             </Space>
                         ))}
                         <Form.Item>
-                            <Button style={{ fontWeight: 600, fontSize: 14 }} type="dashed" onClick={() => add()} block icon={<PlusOutlined />}>
+                            <Button style={{ fontWeight: 600, fontSize: 14, inlineSize: 'initial' }} type="dashed" onClick={() => add()} block icon={<PlusOutlined />}>
                                 اضافه کردن ردیف
                             </Button>
+
                         </Form.Item>
                     </>
                 )}
