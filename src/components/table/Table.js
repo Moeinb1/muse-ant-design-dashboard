@@ -1,8 +1,10 @@
 import React, { useState } from "react";
-import { Form, Input, DatePicker, ConfigProvider, Space, Row, Col } from "antd";
+import { Form, Input, DatePicker, ConfigProvider, Space, Row, Col, Button } from "antd";
 import fa_IR from "antd/lib/locale/fa_IR";
 import "antd/dist/antd.css";
 import { useLocation } from "react-router-dom";
+import FactorizeTable from './FactorizeTable';
+
 import {
     PlusCircleOutlined,
     MinusCircleOutlined,
@@ -31,16 +33,17 @@ const Table = () => {
     };
 
     //reset counter
-    let animals = [];
+    let Data = [];
 
     for (var i = 1; i <= counter; i++) {
-        animals.push(i);
+        Data.push(i);
     }
-
+    const onFinish = (values) => {
+        console.log('Received values of form:', values);
+    };
     return (
         <>
             <Form
-                name="basic"
                 initialValues={{ remember: false }}
                 onError={(err) => {
                     console.log(err);
@@ -53,10 +56,10 @@ const Table = () => {
                     xs: { span: 12 },
                     sm: { span: 8 },
                 }}
-                autoComplete="off"
+                name="dynamic_form_nest_item" onFinish={onFinish} autoComplete="off"
                 style={{ background: "#FFFFFF", borderRadius: 8, padding: 50 }}
                 form={form}
-                layout="vertical"
+                layout="horizontal"
                 onValuesChange={onFormLayoutChange}
                 disabled={componentDisabled}
             >
@@ -262,13 +265,6 @@ const Table = () => {
                         )}
                     </Col>
                 </Row>
-
-                {/* <Form.Item label="Button">
-                    <Button onClick={() => {
-                        console.log(form.getFieldValue('contractDate').$jy + "/" + form.getFieldValue('contractDate').$jM + "/" + form.getFieldValue('contractDate').$jD, "form is here")
-                    }}>Button</Button>
-                </Form.Item> */}
-
                 <h1 style={{ marginBottom: 15 }}>ایجاد فاکتور</h1>
                 <div primary style={{ margin: "10px" }} className="btn__container">
                     <PlusCircleOutlined
@@ -303,7 +299,7 @@ const Table = () => {
                     تعداد کل فاکتورهای ایجاد شده : {counter}
                 </div>
 
-                <Row>
+                <Row style={{ marginRight: 55, marginTop: 8 }}>
                     <Col span={4}>
                         <h1>نام کالا</h1>
                     </Col>
@@ -319,48 +315,13 @@ const Table = () => {
                         <h1>قیمت فاکتور سطر</h1>
                     </Col>
                 </Row>
-                <ul>
-                    {animals.map((i) => (
-                        <Row>
-                            {" "}
-                            <Col id={i} span={4}>
-                                <Form.Item name="goodName" style={{ margin: 12 }}>
-                                    <Input
-                                        placeholder="نام کالا"
-                                        style={{ width: 160, height: 40, background: "#F8F8F8" }}
-                                    />
-                                </Form.Item>
-                            </Col>
-                            <Col id={i} span={4}>
-                                <Form.Item name="goodCount" style={{ margin: 12 }}>
-                                    <Input
-                                        placeholder="مقدار کالا"
-                                        style={{ width: 160, height: 40, background: "#F8F8F8" }}
-                                    />
-                                </Form.Item>
-                            </Col>
-                            <Col id={i} span={4}>
-                                <Form.Item name="unitPrice" style={{ margin: 12 }}>
-                                    <Input
-                                        placeholder="قیمت واحد "
-                                        style={{ width: 160, height: 40, background: "#F8F8F8" }}
-                                    />
-                                </Form.Item>
-                            </Col>
-                            <Col id={i} span={4} >
-                                <Form.Item name="rowPrice">
-                                    <Input
-                                        placeholder="قیمت کل سطر "
-                                        style={{ width: 160, height: 40, background: "#F8F8F8" }}
-                                    />
-                                </Form.Item>
-                            </Col>
-                            <Col id={i} onClick={(e) => animals.filter((i) => e.currentTarget.id === i[i])}>
-                                <DeleteOutlined />
-                            </Col>
-                        </Row>
-                    ))}
-                </ul>
+                <FactorizeTable />
+
+                <Form.Item label="Button">
+                    <Button onClick={() => {
+                        console.log(form.getFieldValue("users"))
+                    }}>Button</Button>
+                </Form.Item>
             </Form>
         </>
     );
