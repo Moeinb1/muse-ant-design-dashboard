@@ -9,8 +9,7 @@ import {
 import { DatePicker as DatePickerJalali, JalaliLocaleListener } from "antd-jalali";
 import fa_IR from "antd/lib/locale/fa_IR";
 import "antd/dist/antd.css";
-import { Row } from 'antd';
-import { Col } from 'antd';
+import { Row, Col } from 'antd';
 
 const Table = () => {
     const [componentDisabled, setComponentDisabled] = useState(false);
