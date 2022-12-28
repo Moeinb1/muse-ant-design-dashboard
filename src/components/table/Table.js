@@ -11,13 +11,13 @@ const Table = () => {
     const onFormLayoutChange = ({ disabled }) => {
         setComponentDisabled(disabled);
     };
-    const [form] = Form.useForm();
     const { pathname } = useLocation();
     const page = pathname.replace("/", "");
-    const [users, setusers] = useState([])
     const onFinish = (values) => {
         console.log('Received values of form:', values);
     };
+    const [form] = Form.useForm();
+    console.log(form.getFieldValue(form.getFieldValue('contractNumber')), "dasasd")
 
     return (
         <>
@@ -34,11 +34,11 @@ const Table = () => {
                     xs: { span: 12 },
                     sm: { span: 8 },
                 }}
-                name="dynamic_form_nest_item" onFinish={onFinish} autoComplete="off"
+                name="basic"
+                onFinish={onFinish} autoComplete="off"
                 style={{ background: "#FFFFFF", borderRadius: 8, padding: 50 }}
                 form={form}
                 layout="horizontal"
-                onFinish={onFinish}
                 onValuesChange={onFormLayoutChange}
                 disabled={componentDisabled}
             >
@@ -90,7 +90,6 @@ const Table = () => {
                             />
                         </Form.Item>
                     </Col>
-
                     <Col span={8}>
                         <Form.Item
                             label={
@@ -118,8 +117,6 @@ const Table = () => {
                                 style={{ width: 160, height: 40, background: "#F8F8F8" }}
                             />
                         </Form.Item>
-                    </Col>
-                    <Col span={8}>
                         <Form.Item
                             label={
                                 <div style={{ marginLeft: 83, fontWeight: 600 }}>ترم خرید</div>
@@ -132,6 +129,9 @@ const Table = () => {
                                 style={{ width: 160, height: 40, background: "#F8F8F8" }}
                             />
                         </Form.Item>
+                    </Col>
+                    <Col span={8}>
+
 
                         <Form.Item
                             label={
@@ -147,9 +147,7 @@ const Table = () => {
                                 style={{ width: 160, height: 40, background: "#F8F8F8" }}
                             />
                         </Form.Item>
-                    </Col>
 
-                    <Col span={8}>
                         <Form.Item
                             label={
                                 <div style={{ marginLeft: 77, fontWeight: 600 }}>
@@ -179,6 +177,7 @@ const Table = () => {
                             />
                         </Form.Item>
                     </Col>
+
                     <Col span={8}>
                         <Form.Item
                             label={
@@ -206,8 +205,6 @@ const Table = () => {
                                 style={{ width: 160, height: 40, background: "#F8F8F8" }}
                             />
                         </Form.Item>
-                    </Col>
-                    <Col span={8}>
                         <Form.Item
                             label={
                                 <div style={{ marginLeft: 78, fontWeight: 600 }}>قیمت کل</div>
@@ -220,6 +217,9 @@ const Table = () => {
                                 style={{ width: 160, height: 40, background: "#F8F8F8" }}
                             />
                         </Form.Item>
+                    </Col>
+                    <Col span={8}>
+
 
                         {page === "billing" ? (
                             <Form.Item
@@ -245,24 +245,21 @@ const Table = () => {
                 <Row id="go" style={{ marginTop: 8, marginRight: 50 }}>
                     <h1 style={{ fontWeight: 600, fontSize: 14 }}>نام کالا</h1>
                     <Col span={2} />
-                    <Col span={1} />
+                    <Col span={2} />
                     <h1 style={{ fontWeight: 600, fontSize: 14 }}> قیمت واحد</h1>
                     <Col span={2} />
                     <Col span={2} />
                     <h1 style={{ fontWeight: 600, fontSize: 14 }}> مقدار کالا</h1>
-                    <Col span={2} />
+                    <Col span={3} />
                     <h1 style={{ fontWeight: 600, fontSize: 14 }}>قیمت فاکتور سطر</h1>
                 </Row>
-                <FactorizeTable />
-                <Form.Item label="Button">
-                    <Button onClick={() => {
-                        console.log(form.getFieldValue("users"), "usersssssss")
-                        console.log(users, "users")
+                <FactorizeTable name='usersss' />
 
+                <Form.Item>
 
-
-
-                    }}>Button</Button>
+                    <Button style={{ width: 250, fontSize: 16, fontWeight: 600, color: 'white', borderColor: 'blue', background: 'blue', marginRight: window.outerWidth / 4 }} primary blue onClick={() => {
+                        console.log(form.getFieldValue("usersss"), "dasasd")
+                    }}>اضافه کردن پرفرما</Button>
                 </Form.Item>
             </Form>
         </>
