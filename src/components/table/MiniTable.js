@@ -45,21 +45,21 @@ const Table = () => {
 
                 <Row>
                     <Col span={12}>
-                        <Form.Item label={<div style={{ marginLeft: 55, fontWeight: 600 }}>محل تامین ارز</div>} name='currencyPlace' style={{ margin: 12 }} >
+                        <Form.Item label={<div style={{ marginLeft: 100, fontWeight: 600, display: 'ruby' }}>محل تامین ارز</div>} name='currencyPlace' style={{ margin: 12 }} >
                             <Input placeholder='محل تامین ارز' style={{ width: 160, height: 40, background: '#F8F8F8' }} />
                         </Form.Item>
                     </Col>
-                    <Col span={12}>  <Form.Item label={<div style={{ marginLeft: 81, fontWeight: 600 }}>مقدار ارز</div>} name='currencyValue' style={{ margin: 12 }} >
+                    <Col span={12}>  <Form.Item label={<div style={{ marginLeft: 127, fontWeight: 600, display: 'ruby' }}>مقدار ارز</div>} name='currencyValue' style={{ margin: 12 }} >
                         <Input placeholder='مقدار ارز' style={{ width: 160, height: 40, background: '#F8F8F8' }} />
                     </Form.Item>
                     </Col>
                     <Col span={12}>
-                        <Form.Item label={<div style={{ marginLeft: 92, fontWeight: 600 }}>نوع ارز</div>} name='currencykind' style={{ margin: 12 }} >
+                        <Form.Item label={<div style={{ marginLeft: 137, fontWeight: 600, display: 'ruby' }}>نوع ارز</div>} name='currencykind' style={{ margin: 12 }} >
                             <Input placeholder='نوع ارز' style={{ width: 160, height: 40, background: '#F8F8F8' }} />
                         </Form.Item>
                     </Col>
                     <Col span={12}>
-                        <Form.Item label={<div style={{ marginLeft: 86, fontWeight: 600 }}>تاریخ ارز</div>} name='currencyDate' style={{ margin: 12 }} >
+                        <Form.Item label={<div style={{ marginLeft: 130, fontWeight: 600, display: 'ruby' }}>تاریخ ارز</div>} name='currencyDate' style={{ margin: 12 }} >
                             <Input placeholder='تاریخ ارز' style={{ width: 160, height: 40, background: '#F8F8F8' }} />
                         </Form.Item>
                     </Col>

@@ -38,7 +38,7 @@ const Table = () => {
                 onFinish={onFinish} autoComplete="off"
                 style={{ background: "#FFFFFF", borderRadius: 8, padding: 50 }}
                 form={form}
-                layout="horizontal"
+                layout="vertical"
                 onValuesChange={onFormLayoutChange}
                 disabled={componentDisabled}
             >
@@ -46,7 +46,7 @@ const Table = () => {
                     <Col span={8}>
                         <Form.Item
                             label={
-                                <div style={{ marginLeft: 59, fontWeight: 600 }}>
+                                <div style={{ marginLeft: 39, fontWeight: 600, display: 'ruby' }}>
                                     شماره قرارداد
                                 </div>
                             }
@@ -62,7 +62,7 @@ const Table = () => {
                         <Form.Item
                             name="contractDate"
                             label={
-                                <div style={{ marginLeft: 65, fontWeight: 600 }}>
+                                <div style={{ marginLeft: 47, fontWeight: 600, display: 'ruby' }}>
                                     تاریخ قرارداد
                                 </div>
                             }
@@ -74,10 +74,9 @@ const Table = () => {
                                 style={{ width: 160, height: 40, background: "#F8F8F8" }}
                             />
                         </Form.Item>
-
                         <Form.Item
                             label={
-                                <div style={{ marginLeft: 65, fontWeight: 600 }}>
+                                <div style={{ marginLeft: 47, fontWeight: 600, display: 'ruby' }}>
                                     نام فروشنده
                                 </div>
                             }
@@ -89,125 +88,9 @@ const Table = () => {
                                 style={{ width: 160, height: 40, background: "#F8F8F8" }}
                             />
                         </Form.Item>
-                    </Col>
-                    <Col span={8}>
                         <Form.Item
                             label={
-                                <div style={{ marginLeft: 75, fontWeight: 600 }}>
-                                    نام خریدار
-                                </div>
-                            }
-                            name="buyerName"
-                            style={{ margin: 12 }}
-                        >
-                            <Input
-                                placeholder="نام خریدار"
-                                style={{ width: 160, height: 40, background: "#F8F8F8" }}
-                            />
-                        </Form.Item>
-                        <Form.Item
-                            label={
-                                <div style={{ marginLeft: 89, fontWeight: 600 }}>نام برند</div>
-                            }
-                            name="brandName"
-                            style={{ margin: 12 }}
-                        >
-                            <Input
-                                placeholder="نام برند"
-                                style={{ width: 160, height: 40, background: "#F8F8F8" }}
-                            />
-                        </Form.Item>
-                        <Form.Item
-                            label={
-                                <div style={{ marginLeft: 83, fontWeight: 600 }}>ترم خرید</div>
-                            }
-                            name="buyTerm"
-                            style={{ margin: 12 }}
-                        >
-                            <Input
-                                placeholder="ترم خرید"
-                                style={{ width: 160, height: 40, background: "#F8F8F8" }}
-                            />
-                        </Form.Item>
-                    </Col>
-                    <Col span={8}>
-
-
-                        <Form.Item
-                            label={
-                                <div style={{ marginLeft: 68, fontWeight: 600 }}>
-                                    بندر بارگیری
-                                </div>
-                            }
-                            name="startPort"
-                            style={{ margin: 12 }}
-                        >
-                            <Input
-                                placeholder="بندر بارگیری"
-                                style={{ width: 160, height: 40, background: "#F8F8F8" }}
-                            />
-                        </Form.Item>
-
-                        <Form.Item
-                            label={
-                                <div style={{ marginLeft: 77, fontWeight: 600 }}>
-                                    بندر تخلیه
-                                </div>
-                            }
-                            name="endPort"
-                            style={{ margin: 12 }}
-                        >
-                            <Input
-                                placeholder="بندر تخلیه"
-                                style={{ width: 160, height: 40, background: "#F8F8F8" }}
-                            />
-                        </Form.Item>
-                        <Form.Item
-                            label={
-                                <div style={{ marginLeft: 33, fontWeight: 600 }}>
-                                    قیمت واحد (FOB)
-                                </div>
-                            }
-                            name="fobPrice"
-                            style={{ margin: 12 }}
-                        >
-                            <Input
-                                placeholder="قیمت واحد  (FOB)"
-                                style={{ width: 160, height: 40, background: "#F8F8F8" }}
-                            />
-                        </Form.Item>
-                    </Col>
-
-                    <Col span={8}>
-                        <Form.Item
-                            label={
-                                <div style={{ marginLeft: 69, fontWeight: 600 }}>هزینه حمل</div>
-                            }
-                            name="transportPrice"
-                            style={{ margin: 12 }}
-                        >
-                            <Input
-                                placeholder="هزینه حمل"
-                                style={{ width: 160, height: 40, background: "#F8F8F8" }}
-                            />
-                        </Form.Item>
-                        <Form.Item
-                            label={
-                                <div style={{ marginLeft: 34, fontWeight: 600 }}>
-                                    قیمت واحد (CFR)
-                                </div>
-                            }
-                            name="cfrPrice"
-                            style={{ margin: 12 }}
-                        >
-                            <Input
-                                placeholder="قیمت واحد  (CFR)"
-                                style={{ width: 160, height: 40, background: "#F8F8F8" }}
-                            />
-                        </Form.Item>
-                        <Form.Item
-                            label={
-                                <div style={{ marginLeft: 78, fontWeight: 600 }}>قیمت کل</div>
+                                <div style={{ marginLeft: 60, fontWeight: 600, display: 'ruby' }}>قیمت کل</div>
                             }
                             name="totalPrice"
                             style={{ margin: 12 }}
@@ -217,14 +100,10 @@ const Table = () => {
                                 style={{ width: 160, height: 40, background: "#F8F8F8" }}
                             />
                         </Form.Item>
-                    </Col>
-                    <Col span={8}>
-
-
                         {page === "billing" ? (
                             <Form.Item
                                 label={
-                                    <div style={{ marginLeft: 23, fontWeight: 600 }}>
+                                    <div style={{ marginLeft: 9, fontWeight: 600, display: 'ruby' }}>
                                         شماره ثبت سفارش
                                     </div>
                                 }
@@ -240,6 +119,132 @@ const Table = () => {
                             ""
                         )}
                     </Col>
+
+                    <Col span={8}>
+                        <Form.Item
+                            label={
+                                <div style={{ marginLeft: 57, fontWeight: 600, display: 'ruby' }}>
+                                    نام خریدار
+                                </div>
+                            }
+                            name="buyerName"
+                            style={{ margin: 12 }}
+                        >
+                            <Input
+                                placeholder="نام خریدار"
+                                style={{ width: 160, height: 40, background: "#F8F8F8" }}
+                            />
+                        </Form.Item>
+                        <Form.Item
+                            label={
+                                <div style={{ marginLeft: 72, fontWeight: 600, display: 'ruby' }}>نام برند</div>
+                            }
+                            name="brandName"
+                            style={{ margin: 12 }}
+                        >
+                            <Input
+                                placeholder="نام برند"
+                                style={{ width: 160, height: 40, background: "#F8F8F8" }}
+                            />
+                        </Form.Item>
+                        <Form.Item
+                            label={
+                                <div style={{ marginLeft: 65, fontWeight: 600, display: 'ruby' }}>ترم خرید</div>
+                            }
+                            name="buyTerm"
+                            style={{ margin: 12 }}
+                        >
+                            <Input
+                                placeholder="ترم خرید"
+                                style={{ width: 160, height: 40, background: "#F8F8F8" }}
+                            />
+                        </Form.Item>
+                        <Form.Item
+                            label={
+                                <div style={{ marginLeft: 17, fontWeight: 600, display: 'ruby' }}>
+                                    قیمت واحد (CFR)
+                                </div>
+                            }
+                            name="cfrPrice"
+                            style={{ margin: 12 }}
+                        >
+                            <Input
+                                placeholder="قیمت واحد  (CFR)"
+                                style={{ width: 160, height: 40, background: "#F8F8F8" }}
+                            />
+                        </Form.Item>
+                    </Col>
+
+
+
+
+
+
+                    <Col span={8}>
+
+
+                        <Form.Item
+                            label={
+                                <div style={{ marginLeft: 50, fontWeight: 600, display: 'ruby' }}>
+                                    بندر بارگیری
+                                </div>
+                            }
+                            name="startPort"
+                            style={{ margin: 12 }}
+                        >
+                            <Input
+                                placeholder="بندر بارگیری"
+                                style={{ width: 160, height: 40, background: "#F8F8F8" }}
+                            />
+                        </Form.Item>
+
+                        <Form.Item
+                            label={
+                                <div style={{ marginLeft: 58, fontWeight: 600, display: 'ruby' }}>
+                                    بندر تخلیه
+                                </div>
+                            }
+                            name="endPort"
+                            style={{ margin: 12 }}
+                        >
+                            <Input
+                                placeholder="بندر تخلیه"
+                                style={{ width: 160, height: 40, background: "#F8F8F8" }}
+                            />
+                        </Form.Item>
+                        <Form.Item
+                            label={
+                                <div style={{ marginLeft: 15, fontWeight: 600, display: 'ruby' }}>
+                                    قیمت واحد (FOB)
+                                </div>
+                            }
+                            name="fobPrice"
+                            style={{ margin: 12 }}
+                        >
+                            <Input
+                                placeholder="قیمت واحد  (FOB)"
+                                style={{ width: 160, height: 40, background: "#F8F8F8" }}
+                            />
+                        </Form.Item>
+                        <Form.Item
+                            label={
+                                <div style={{ marginLeft: 53, fontWeight: 600, display: 'ruby' }}>هزینه حمل</div>
+                            }
+                            name="transportPrice"
+                            style={{ margin: 12 }}
+                        >
+                            <Input
+                                placeholder="هزینه حمل"
+                                style={{ width: 160, height: 40, background: "#F8F8F8" }}
+                            />
+                        </Form.Item>
+                    </Col>
+
+
+
+
+
+
                 </Row>
                 <h1 style={{ margin: '25px 0px 30px 0px' }}>ایجاد فاکتور</h1>
                 <Row id="go" style={{ marginTop: 8, marginRight: 50 }}>
