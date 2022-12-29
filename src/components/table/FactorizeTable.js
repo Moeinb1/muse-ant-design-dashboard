@@ -61,14 +61,14 @@ const FactorizeTable = () => {
                                     >
                                         <Typography
 
-                                            formatter={(value) => `${value}`.replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
-                                            parser={(value) => value.replace(/\\s?|(,*)/g, '')}
-                                            style={{ direction: 'ltr', background: "#F8F8F8", width: 160, paddingInlineEnd: 80, fontSize: 12 }} placeholder="قیمت فاکتور سطر" >
-                                            {form.getFieldValue("usersss")[key] ? (form.getFieldValue("usersss")[key].goodUnit * form.getFieldValue("usersss")[key].priceUnit) : form.setFieldValue({
+
+                                            style={{ direction: 'rtl', background: "#F8F8F8", width: 160, paddingInlineEnd: 80, fontSize: 12 }} placeholder="قیمت فاکتور سطر" >
+                                            {form.getFieldValue("usersss")[key] ? (form.getFieldValue("usersss")[key].goodUnit * form.getFieldValue("usersss")[key].priceUnit).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') : form.setFieldValue({
                                                 "usersss": 0
                                             })}
                                         </Typography>
                                     </Form.Item>
+                                    <Col span={1} />
                                     <Form.Item
                                         {...restField}
                                         name={[name, 'priceUnit']}

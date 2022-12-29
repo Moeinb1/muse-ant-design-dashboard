@@ -260,24 +260,22 @@ const Table = () => {
                             </Form.Item>
                         </Col>
                     </Row>
-                    <h1 style={{ margin: '25px 0px 30px 0px' }}>ایجاد فاکتور</h1>
+                    <h1 style={{ margin: '25px 0px 0px 0px' }}>ایجاد فاکتور</h1>
                     <Row id="go" style={{ marginTop: 8, marginRight: 50 }}>
-                        <h1 style={{ fontWeight: 600, fontSize: 12 }}>نام کالا</h1>
-                        <Col span={2} />
-                        <Col span={2} />
-                        <h1 style={{ fontWeight: 600, fontSize: 12 }}> قیمت واحد</h1>
-                        <Col span={2} />
-                        <Col span={2} />
-                        <h1 style={{ fontWeight: 600, fontSize: 12 }}> مقدار کالا</h1>
-                        <Col span={2} />
-                        <h1 style={{ fontWeight: 600, fontSize: 12 }}>قیمت فاکتور سطر</h1>
+                        <h1 style={{ fontWeight: 600, fontSize: 12, display: 'ruby' }}>نام کالا</h1>
+                        <Col span={5} />
+                        <h1 style={{ fontWeight: 600, fontSize: 12, display: 'ruby' }}> قیمت واحد</h1>
+                        <Col span={6} />
+                        <h1 style={{ fontWeight: 600, fontSize: 12, display: 'ruby' }}> مقدار کالا</h1>
+                        <Col span={4} />
+                        <h1 style={{ fontWeight: 600, fontSize: 12, display: 'ruby' }}>قیمت فاکتور سطر</h1>
                     </Row>
                     <Row style={{ height: 1, background: 'gray', marginBottom: 5 }} />
                     <Row >
                         <FactorizeTable form={form} />
                     </Row>
                     <Form.Item >
-                        <TextArea style={{ direction: 'rtl', width: 500, maxWidth: 500 }} rows={4} placeholder="یادداشت کنید" />
+                        <TextArea style={{ direction: 'rtl', width: 500, maxWidth: 500, display: 'flex' }} rows={4} placeholder="یادداشت کنید" />
                     </Form.Item>
                 </Col>
             </Form>
