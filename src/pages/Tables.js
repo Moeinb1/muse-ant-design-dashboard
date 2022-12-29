@@ -2,17 +2,21 @@
 import React from "react";
 import Table from "../components/table/Table"
 import MiniTable from './../components/table/MiniTable';
+import { Col, Row } from 'antd';
 
 
 function Tables() {
   return (
     <div style={{ borderRadius: 8, opacity: 0.8 }}>
-      <div style={{ boxShadow: ' 0px 10px 0 0 #F8F8F8' }}>
-        <Table />
-      </div>
-      <div style={{ paddingTop: 30, boxShadow: ' 0px 0px 0px 5px #F8F8F8' }}>
-        <MiniTable />
-      </div>
+      <Row style={{ boxShadow: ' 0px 10px 0 0 #F8F8F8' }}>
+        <Col span={15}><Table /></Col>
+        <Col span={1} style={{ background: '#FAFAFA' }} ></Col>
+        <Col span={8}><MiniTable /></Col>
+
+
+
+      </Row>
+
     </div>
 
   );

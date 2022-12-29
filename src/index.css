@@ -13,8 +13,9 @@
           monospace;
       }
       @font-face {
-        font-family: "IranianSans";
-        src: local("IranianSans"),
-         url("../src/assets/fonts/Iranian-Sans.ttf") format("truetype");
+        font-family: "IRANSans";
+        src: local("IRANSans"),
+         url("../src/assets/fonts/IRANSans\ Regular.ttf") format("truetype");
         font-weight: normal;
+        
         }
